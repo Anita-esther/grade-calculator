@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Grade Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<h1>Student Grade Calculator</h1>
+<p class="count"><span id="total">0</span> students</p>
+</header>
+<main>
+<section class="panel">
+<h2>Enter scores</h2>
+<form id="form" novalidate>
+<div class="field"><label for="name">Student name</label><input id="name" type="text" autocomplete="off"><small class="err" id="err-name"></small></div>
+<div id="subjectFields"></div>
+<button type="submit">Calculate result</button>
+<p id="status" role="status"></p>
+</form>
+<div class="scale">
+<h3>Grading scale</h3>
+<ul id="scale"></ul>
+</div>
+</section>
+<section class="panel wide">
+<h2>Class results</h2>
+<div class="summary" id="summary">
+<div><span class="label">Highest-scoring student</span><strong id="top">None yet</strong></div>
+<div><span class="label">Weakest subject (lowest class average)</span><strong id="weak">None yet</strong></div>
+</div>
+<div class="scroll">
+<table>
+<thead id="head"></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<p id="empty" class="empty">No results yet. Enter a student's name and five scores to begin.</p>
+<div class="scroll" id="averagesWrap">
+<h3>Class average per subject</h3>
+<table>
+<thead><tr id="avgHead"></tr></thead>
+<tbody><tr id="avgRow"></tr></tbody>
+</table>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
